@@ -1,12 +1,64 @@
-# React + Vite
+# 💊 Smart Health Manager – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React-based frontend for a **Smart Health & Wellness Management System** — helping users track diet, fitness, mental health, medications, and more, all in one place.
 
-Currently, two official plugins are available:
+---
+<!-- 
+## 🚀 Live Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 [Visit Live Site](https://your-deployment-link.com)  
+> (Replace with your Vercel / Netlify / GitHub Pages link)
 
-## Expanding the ESLint configuration
+--- -->
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features (Frontend)
+
+🎯 Built entirely in **React.js**, this frontend focuses on **performance, accessibility, and user experience**.
+
+### 🧑‍⚕️ Key Pages:
+
+- ✅ **Login / Register** – User authentication forms with validation
+- 🏠 **Dashboard** – Overview of user health metrics and quick links
+- 🍱 **Meal Tracker** – Add, view, and update diet entries
+- 🧘 **Mood Tracker** – Daily mood logs with journal entry
+- 🏃 **Fitness Tracker** – Log workouts and progress
+- 💊 **Medication Manager** – View, add, and schedule medication reminders
+- 🚨 **Emergency Info** – SOS page with hospital & contact info
+- 🤰 **Pregnancy Tracker** – Pregnancy timeline and health tips
+
+---
+
+## 🖼️ UI Screenshots
+
+<!-- > (Add your screenshots or screen recordings here) -->
+
+- `📸` ![Login Page](screenshots/login.png)
+- `📸` ![Dashboard](screenshots/dashboard.png)
+- `📸` ![Meal Tracker](screenshots/meals.png)
+
+---
+
+## 🔧 Technologies Used
+
+| Tech            | Description                                |
+|-----------------|--------------------------------------------|
+| `React.js`      | Frontend framework                         |
+| `React Router`  | Client-side routing                        |
+| `Axios`         | HTTP requests to PHP backend               |
+| `CSS / Tailwind`| UI styling and responsive layout           |
+| `XAMPP`         | Local development environment (PHP+MySQL) |
+
+---
+
+## 📁 Project Structure
+
+```bash
+smart-health-manager/
+├── public/
+├── src/
+│   ├── api/              # Axios API functions
+│   ├── components/       # Reusable components (Navbar, Button)
+│   ├── pages/            # Main views/screens
+│   ├── styles/           # CSS or Tailwind files
+│   ├── App.jsx           # Routes setup
+│   └── index.js          # React entry point
