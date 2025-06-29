@@ -1,0 +1,55 @@
+RewriteEngine On
+
+# Handle OPTIONS requests FIRST - before any redirects
+RewriteCond %{REQUEST_METHOD} ^OPTIONS$
+RewriteRule ^(.*)$ cors-preflight.php [L]
+
+# API Routes - Only for non-OPTIONS requests
+# Remove trailing slashes to prevent redirects
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/auth/login$ api/auth/login.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/auth/register$ api/auth/register.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/user/profile$ api/user/profile.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/meals$ api/meals/index.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/moods$ api/moods/index.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/workouts$ api/workouts/index.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/medications$ api/medications/index.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/emergency$ api/emergency/index.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/pregnancy$ api/pregnancy/index.php [L,QSA]
+
+# Debug endpoints
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/test-cors$ test-cors.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/debug-meals$ debug-meals.php [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !^OPTIONS$
+RewriteRule ^api/debug-meals-post$ debug-meals-post.php [L,QSA]
+
+# Deny access to sensitive files
+<Files "*.sql">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.md">
+    Order allow,deny
+    Deny from all
+</Files>
